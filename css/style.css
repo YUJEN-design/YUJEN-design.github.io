@@ -1,0 +1,443 @@
+/* =========================
+   1. Basic reset
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f2ed;
+  color: #171717;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* =========================
+   2. Global layout
+========================= */
+
+.container {
+  width: min(100% - 64px, 1440px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 120px;
+}
+
+/* =========================
+   3. Header
+========================= */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  padding-block: 28px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 15px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* =========================
+   4. Hero
+========================= */
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  align-content: center;
+  padding-block: 80px 120px;
+}
+
+.hero-label {
+  margin: 0 0 28px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-title {
+  max-width: 1200px;
+  margin: 0;
+  font-size: clamp(54px, 8.5vw, 138px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 42px 0 0 auto;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.45;
+}
+
+/* =========================
+   5. Section heading
+========================= */
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.section-number {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(40px, 6vw, 82px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+/* =========================
+   6. Project grid
+========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px 32px;
+}
+
+.project-card {
+  display: block;
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #dedbd4;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.project-card:hover .project-image img,
+.project-card:focus-visible .project-image img {
+  transform: scale(1.025);
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #d7d2c8,
+      #efede7
+    );
+  color: #55514b;
+  text-align: center;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+  padding-top: 18px;
+}
+
+.project-name {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.project-category {
+  margin: 8px 0 0;
+  color: #68645e;
+  font-size: 14px;
+}
+
+.project-year {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* Create visual rhythm */
+
+.project-card:nth-child(even) {
+  margin-top: 120px;
+}
+
+/* =========================
+   7. About preview
+========================= */
+
+.about-preview {
+  border-top: 1px solid #c9c5bc;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+.about-title {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(30px, 4.5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+/* =========================
+   8. Footer
+========================= */
+
+.site-footer {
+  padding-block: 48px;
+  border-top: 1px solid #c9c5bc;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 14px;
+}
+
+/* =========================
+   9. Tablet RWD
+========================= */
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 40px, 1440px);
+  }
+
+  .section {
+    padding-block: 88px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-block: 100px;
+  }
+
+  .hero-description {
+    margin-left: 0;
+  }
+
+  .section-heading,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-grid {
+    gap: 64px 24px;
+  }
+
+  .project-card:nth-child(even) {
+    margin-top: 72px;
+  }
+}
+
+/* =========================
+   10. Mobile RWD
+========================= */
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 32px, 1440px);
+  }
+
+  .site-header {
+    padding-block: 20px;
+  }
+
+  .navigation {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding-block: 88px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 16vw, 76px);
+    line-height: 0.92;
+  }
+
+  .hero-description {
+    margin-top: 32px;
+  }
+
+  .section {
+    padding-block: 72px;
+  }
+
+  .section-heading {
+    margin-bottom: 36px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .project-card:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding-top: 14px;
+  }
+
+  .about-text {
+    font-size: clamp(30px, 9vw, 48px);
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   11. Very small screens
+========================= */
+
+@media (max-width: 420px) {
+  .navigation {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr;
+  }
+
+  .project-year {
+    margin-top: 0;
+  }
+}
+
+/* =========================
+   12. Reduced motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
