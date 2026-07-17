@@ -441,3 +441,325 @@ textarea {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* =========================
+   13. Case study page
+========================= */
+
+.case-hero {
+  padding-block: 80px 100px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 80px;
+  font-size: 14px;
+}
+
+.case-category {
+  margin: 0 0 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.case-title {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(64px, 11vw, 170px);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+}
+
+.case-intro {
+  max-width: 760px;
+  margin: 48px 0 0 auto;
+  font-size: clamp(20px, 2.5vw, 30px);
+  line-height: 1.4;
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 100px;
+  padding-top: 28px;
+  border-top: 1px solid #c9c5bc;
+}
+
+.meta-label {
+  margin: 0 0 8px;
+  color: #6f6a63;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.meta-value {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.case-cover {
+  padding-bottom: 120px;
+}
+
+.case-image-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 460px;
+  padding: 32px;
+  background: #dedbd4;
+  color: #5b5751;
+  text-align: center;
+}
+
+.case-cover-placeholder {
+  min-height: min(72vw, 900px);
+}
+
+.case-section {
+  padding-block: 120px;
+}
+
+.case-section-border {
+  border-top: 1px solid #c9c5bc;
+}
+
+.case-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+.case-section-label {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.case-copy {
+  max-width: 900px;
+}
+
+.case-heading {
+  margin: 0 0 42px;
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.case-copy p {
+  max-width: 760px;
+  margin: 0 0 24px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.case-highlight {
+  margin-top: 60px;
+  padding: 36px;
+  border-left: 3px solid #171717;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.case-highlight p {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.35;
+}
+
+.case-list {
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #c9c5bc;
+}
+
+.case-list li {
+  padding-block: 18px;
+  border-bottom: 1px solid #c9c5bc;
+  font-size: 18px;
+}
+
+.case-gallery-section {
+  padding-bottom: 120px;
+}
+
+.case-gallery {
+  display: grid;
+  gap: 24px;
+}
+
+.case-gallery-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-gallery-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-wide-image {
+  min-height: min(65vw, 820px);
+}
+
+.case-phone-placeholder {
+  min-height: 680px;
+}
+
+.next-project {
+  padding-block: 120px;
+  border-top: 1px solid #c9c5bc;
+}
+
+.next-project-label {
+  margin: 0 0 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.next-project-link {
+  font-size: clamp(48px, 8vw, 112px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+/* =========================
+   14. Case study tablet
+========================= */
+
+@media (max-width: 900px) {
+  .case-hero {
+    padding-block: 64px 88px;
+  }
+
+  .back-link {
+    margin-bottom: 64px;
+  }
+
+  .case-intro {
+    margin-left: 0;
+  }
+
+  .case-meta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    margin-top: 72px;
+  }
+
+  .case-cover {
+    padding-bottom: 88px;
+  }
+
+  .case-section {
+    padding-block: 88px;
+  }
+
+  .case-content-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .case-gallery-section {
+    padding-bottom: 88px;
+  }
+
+  .case-phone-placeholder {
+    min-height: 520px;
+  }
+
+  .next-project {
+    padding-block: 88px;
+  }
+}
+
+/* =========================
+   15. Case study mobile
+========================= */
+
+@media (max-width: 640px) {
+  .case-hero {
+    padding-block: 48px 72px;
+  }
+
+  .back-link {
+    margin-bottom: 48px;
+  }
+
+  .case-title {
+    font-size: clamp(58px, 19vw, 94px);
+  }
+
+  .case-intro {
+    margin-top: 32px;
+  }
+
+  .case-meta {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 56px;
+  }
+
+  .case-cover {
+    padding-bottom: 72px;
+  }
+
+  .case-cover-placeholder {
+    min-height: 420px;
+  }
+
+  .case-section {
+    padding-block: 72px;
+  }
+
+  .case-heading {
+    margin-bottom: 30px;
+  }
+
+  .case-copy p {
+    font-size: 17px;
+  }
+
+  .case-highlight {
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .case-gallery-section {
+    padding-bottom: 72px;
+  }
+
+  .case-gallery-two,
+  .case-gallery-three {
+    grid-template-columns: 1fr;
+  }
+
+  .case-image-placeholder,
+  .case-phone-placeholder {
+    min-height: 420px;
+  }
+
+  .next-project {
+    padding-block: 72px;
+  }
+}
+
+/* =========================
+   16. Case study small mobile
+========================= */
+
+@media (max-width: 420px) {
+  .case-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .case-image-placeholder,
+  .case-phone-placeholder {
+    min-height: 340px;
+  }
+}
