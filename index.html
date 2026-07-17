@@ -8,125 +8,185 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title> YU JEN TSAI — Graphic & UI Designer</title>
+  <meta
+    name="description"
+    content="Graphic and UI design portfolio featuring branding, editorial design and digital product design."
+  >
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <title>YU JEN TSAI — Graphic & UI Designer</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f2ed;
-      color: #171717;
-    }
-
-    main {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 32px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .name {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .nav-links a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .hero {
-      max-width: 1100px;
-      margin: 120px 0;
-    }
-
-    h1 {
-      max-width: 1000px;
-      margin: 0;
-      font-size: clamp(52px, 9vw, 140px);
-      font-weight: 500;
-      line-height: 0.92;
-      letter-spacing: -0.06em;
-    }
-
-    .intro {
-      max-width: 560px;
-      margin-top: 40px;
-      font-size: 20px;
-      line-height: 1.5;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 700px) {
-      main {
-        padding: 20px;
-      }
-
-      .nav-links {
-        gap: 14px;
-      }
-
-      .hero {
-        margin: 100px 0;
-      }
-
-      footer {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <main>
-    <nav>
-      <div class="name">YU JEN TSAI</div>
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="logo" href="index.html">
+        YU JEN TSAI
+      </a>
 
-      <div class="nav-links">
-        <a href="#">Work</a>
-        <a href="#">About</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
         <a href="mailto:f0253039@gmail.com">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
-      <h1>
-        Graphic and UI designer creating clear, thoughtful digital experiences.
-      </h1>
+      <div class="container">
+        <p class="hero-label">
+          Graphic Design · UI Design
+        </p>
 
-      <p class="intro">
-        I combine visual identity, editorial design and interface design
-        to create engaging brands and digital products.
-      </p>
+        <h1 class="hero-title">
+          Visual ideas shaped into clear digital experiences.
+        </h1>
+
+        <p class="hero-description">
+          I create visual identities, editorial systems and user interfaces
+          that balance clarity, personality and function.
+        </p>
+      </div>
     </section>
 
-    <footer>
-      <span>Available for selected freelance projects</span>
-      <span>Based in Adelaide, Australia</span>
-    </footer>
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-number">
+            01 — Selected work
+          </p>
+
+          <h2 class="section-title">
+            Projects across brand and digital design.
+          </h2>
+        </div>
+
+        <div class="project-grid">
+          <a class="project-card" href="#">
+            <div class="project-image">
+              <div class="project-placeholder">
+                Add branding project image
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">
+                  Studio Identity
+                </h3>
+
+                <p class="project-category">
+                  Brand identity · Graphic design
+                </p>
+              </div>
+
+              <p class="project-year">
+                2026
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#">
+            <div class="project-image">
+              <div class="project-placeholder">
+                Add mobile application image
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">
+                  Wellness App
+                </h3>
+
+                <p class="project-category">
+                  UI design · Product design
+                </p>
+              </div>
+
+              <p class="project-year">
+                2026
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#">
+            <div class="project-image">
+              <div class="project-placeholder">
+                Add editorial project image
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">
+                  Culture Journal
+                </h3>
+
+                <p class="project-category">
+                  Editorial design · Art direction
+                </p>
+              </div>
+
+              <p class="project-year">
+                2025
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#">
+            <div class="project-image">
+              <div class="project-placeholder">
+                Add website project image
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">
+                  Creative Platform
+                </h3>
+
+                <p class="project-category">
+                  Web design · UI design
+                </p>
+              </div>
+
+              <p class="project-year">
+                2025
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-preview" id="about">
+      <div class="container about-grid">
+        <p class="about-title">
+          02 — About
+        </p>
+
+        <p class="about-text">
+          I use typography, layout and interface systems to turn complex
+          ideas into approachable visual experiences.
+        </p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>
+        Available for freelance opportunities
+      </span>
+
+      <a href="mailto:f0253039@gmail.com">
+        f0253039@gmail.com
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
